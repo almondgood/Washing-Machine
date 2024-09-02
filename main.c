@@ -298,8 +298,10 @@ void pwm_speed(char dir) {
         if (key != START_PAUSE_BUTTON) key = input();
            
         MOTOR_PIN=dir; 
-        delay_ms(100);    
-  
+        delay_ms(90);
+  	MOTOR_PIN=STOP;
+    	delay_ms(10);
+	    
         i++;
         
         if (power == OFF) break;  
